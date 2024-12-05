@@ -1,0 +1,21 @@
+
+
+version: "3.4"
+
+
+services:
+  postgres:
+    container_name: bazarapp
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+    
+      - POSTGRES_USER=postgres12
+      - POSTGRES_DB=threads12
+      - POSTGRES_PASSWORD=threads12
+
+volumes:
+  postgres_data:
